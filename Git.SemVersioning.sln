@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git.SemVersioning", "Git.SemVersioning\Git.SemVersioning.csproj", "{D99D17BC-A5C4-493F-ACB6-D0572854CD9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git.SemVersioning.Tests", "Git.SemVersioning.Tests\Git.SemVersioning.Tests.csproj", "{7DC33EFF-068D-4711-B007-9E2D6AAEEE1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D99D17BC-A5C4-493F-ACB6-D0572854CD9D}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{D99D17BC-A5C4-493F-ACB6-D0572854CD9D}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{D99D17BC-A5C4-493F-ACB6-D0572854CD9D}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{D99D17BC-A5C4-493F-ACB6-D0572854CD9D}.Release|AnyCPU.Build.0 = Release|Any CPU
+		{7DC33EFF-068D-4711-B007-9E2D6AAEEE1A}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{7DC33EFF-068D-4711-B007-9E2D6AAEEE1A}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{7DC33EFF-068D-4711-B007-9E2D6AAEEE1A}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{7DC33EFF-068D-4711-B007-9E2D6AAEEE1A}.Release|AnyCPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51AB9AD0-B7A4-496C-800D-87E345BB7836}
+	EndGlobalSection
+EndGlobal

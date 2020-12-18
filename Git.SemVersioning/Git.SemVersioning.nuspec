@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<authors>$author$</authors>
+		<description>$description$</description>
+		<iconUrl>https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png</iconUrl>
+		<language>en-US</language>
+		<projectUrl>https://github.com/jmongard/Git.SemVersioning.Net</projectUrl>
+		<licenseUrl>https://github.com/jmongard/Git.SemVersioning.Net/blob/master/LICENSE</licenseUrl>
+		<tags>git version versioning versions semantic semver</tags>
+		<developmentDependency>true</developmentDependency>
+	</metadata>
+  <files>
+    <file src="bin\$configuration$\**\*.dll;build\*.*" target="build"/>
+  </files>
+</package>

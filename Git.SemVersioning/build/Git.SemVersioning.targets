@@ -1,0 +1,28 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="Git.SemVersioning.GitTask" AssemblyFile="$(MSBuildThisFileDirectory)Git.SemVersioning.dll" />
+
+  <Target Name="GenerateVersionFileFromGit" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <GitVersionInformationFileName Condition=" '$(GitVersionInformationFileName)' == '' ">VersionAssemblyInfo.cs</GitVersionInformationFileName>
+      <GitVersionInformationFilePath Condition=" '$(GitVersionInformationFilePath)' == '' ">$(IntermediateOutputPath)\$(GitVersionInformationFileName)</GitVersionInformationFilePath>
+      <GitVersionIncludeAssemblyVersion Condition=" '$(GitVersionIncludeAssemblyVersion)' == '' ">true</GitVersionIncludeAssemblyVersion>
+      <GitVersionIncludeAssemblyFileVersion Condition=" '$(GitVersionIncludeAssemblyFileVersion)' == '' ">true</GitVersionIncludeAssemblyFileVersion>
+      <GitVersionIncludeAssemblyInformationalVersion Condition=" '$(GitVersionIncludeAssemblyInformationalVersion)' == '' ">true</GitVersionIncludeAssemblyInformationalVersion>
+    </PropertyGroup>
+
+    <Git.SemVersioning.GitTask
+			OutputFilePath="$(GitVersionInformationFilePath)"
+			IncludeAssemblyVersion="$(GitVersionIncludeAssemblyVersion)"
+			IncludeAssemblyFileVersion="$(GitVersionIncludeAssemblyFileVersion)"
+			IncludeAssemblyInformationalVersion="$(GitVersionIncludeAssemblyInformationalVersion)">
+
+      <Output TaskParameter="SemVer1" PropertyName="SemVer1" />
+      <Output TaskParameter="SemVer2" PropertyName="SemVer" />
+    </Git.SemVersioning.GitTask>
+
+    <ItemGroup>
+      <Compile Include="$(GitVersionInformationFilePath)" />
+      <FileWrites Include="$(GitVersionInformationFilePath)" />
+    </ItemGroup>
+  </Target>
+</Project>
